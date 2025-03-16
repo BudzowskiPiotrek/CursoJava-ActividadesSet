@@ -43,8 +43,7 @@ public class Main {
     // MÉTODO PARA AÑADIR UN NUEVO AGENTE A LA BASE DE DATOS
     private static void anadirAgente() {
         System.out.print("INGRESE EL NOMBRE DEL AGENTE: ");
-        String nombre = st.nextLine().toLowerCase(); // CONVIERTE EL NOMBRE A MINÚSCULAS PARA EVITAR DUPLICADOS POR
-                                                     // MAYÚSCULAS/MINÚSCULAS
+        String nombre = st.nextLine().toLowerCase(); // CONVIERTE EL NOMBRE A MINÚSCULAS PARA EVITAR DUPLICADOS 
 
         if (agentes.contains(nombre)) { // VERIFICA SI EL AGENTE YA ESTÁ REGISTRADO
             System.err.println("EL AGENTE YA ESTA REGISTRADO");
@@ -58,8 +57,7 @@ public class Main {
     private static void eliminarAgente() {
         System.out.print("INGRESE EL NOMBRE DEL AGENTE A ELIMINAR: ");
         String nombre = st.nextLine().toLowerCase(); // CONVIERTE EL NOMBRE A MINÚSCULAS PARA UNA COMPARACIÓN
-                                                     // CONSISTENTE
-
+                                                     
         if (agentes.remove(nombre)) { // INTENTA ELIMINAR EL AGENTE, SI EXISTE
             System.out.println("AGENTE ELIMINADO CON EXITO");
         } else {
